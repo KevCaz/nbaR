@@ -1,4 +1,4 @@
-# ref: https://github.com/github/gitignore/blob/master/R.gitignore
+.vscode
 
 # History files
 .Rhistory
