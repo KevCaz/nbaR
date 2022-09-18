@@ -4,7 +4,11 @@
 \name{QueryResultItem}
 \alias{QueryResultItem}
 \title{QueryResultItem Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # QueryResultItem$new()
 }
@@ -18,45 +22,129 @@ the NBA model and endpoints reference at
 \details{
 Model class for QueryResultItem objects. Contains an object returned from a QuerySpec query. Holds an item and a relevance score.
 }
-\section{Fields}{
-
-\describe{
-\item{\code{score}}{numeric}
-
-\item{\code{item}}{list}
-}}
-
 \section{Methods}{
 
 \describe{
 
 \item{\code{$new()}}{
 
-  Constructor QueryResultItem object.
+Constructor QueryResultItem object.
 
 }
 \item{\code{$fromList(QueryResultItemList)}}{
 
-  Create QueryResultItem object from list.
+Create QueryResultItem object from list.
 
 }
 
 \item{\code{$toList()}}{
 
-  Get list representation of QueryResultItem.
+Get list representation of QueryResultItem.
 
 }
 \item{\code{fromJSONString(QueryResultItemJson)}}{
 
-  Create QueryResultItem object from JSON.
+Create QueryResultItem object from JSON.
 
 }
 \item{\code{toJSONString(pretty=TRUE)}}{
 
-  Get JSON representation of QueryResultItem.
+Get JSON representation of QueryResultItem.
 
 }
 }
 }
 
-\keyword{datasets}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{score}}{numeric}
+
+\item{\code{item}}{list}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-QueryResultItem-new}{\code{QueryResultItem$new()}}
+\item \href{#method-QueryResultItem-toList}{\code{QueryResultItem$toList()}}
+\item \href{#method-QueryResultItem-fromList}{\code{QueryResultItem$fromList()}}
+\item \href{#method-QueryResultItem-toJSONString}{\code{QueryResultItem$toJSONString()}}
+\item \href{#method-QueryResultItem-fromJSONString}{\code{QueryResultItem$fromJSONString()}}
+\item \href{#method-QueryResultItem-print}{\code{QueryResultItem$print()}}
+\item \href{#method-QueryResultItem-clone}{\code{QueryResultItem$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-new"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$new(score, item)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$fromList(QueryResultItemList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$fromJSONString(QueryResultItemJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-print"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-QueryResultItem-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-QueryResultItem-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{QueryResultItem$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

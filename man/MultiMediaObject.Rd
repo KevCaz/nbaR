@@ -4,7 +4,11 @@
 \name{MultiMediaObject}
 \alias{MultiMediaObject}
 \title{MultiMediaObject Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # MultiMediaObject$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for MultiMediaObject objects. Naturalis stores a vast amount of multimedia in its internal document store. This can be multimedia captured from physical specimens (e.g. photos of a specimen), but also from human observations (e.g. audio recordings of bird sounds). Digitisation of Naturalis museum objects include a detailed photographic documentation. So far, there are more than 5 million photos and several houndreds of thousands of bird sounds.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor MultiMediaObject object.
+
+}
+\item{\code{$fromList(MultiMediaObjectList)}}{
+
+Create MultiMediaObject object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of MultiMediaObject.
+
+}
+\item{\code{fromJSONString(MultiMediaObjectJson)}}{
+
+Create MultiMediaObject object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of MultiMediaObject.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{sourceSystem}}{SourceSystem}
 
@@ -82,39 +119,122 @@ Model class for MultiMediaObject objects. Naturalis stores a vast amount of mult
 \item{\code{associatedSpecimen}}{Specimen}
 
 \item{\code{associatedTaxon}}{Taxon}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-MultiMediaObject-new}{\code{MultiMediaObject$new()}}
+\item \href{#method-MultiMediaObject-toList}{\code{MultiMediaObject$toList()}}
+\item \href{#method-MultiMediaObject-fromList}{\code{MultiMediaObject$fromList()}}
+\item \href{#method-MultiMediaObject-toJSONString}{\code{MultiMediaObject$toJSONString()}}
+\item \href{#method-MultiMediaObject-fromJSONString}{\code{MultiMediaObject$fromJSONString()}}
+\item \href{#method-MultiMediaObject-print}{\code{MultiMediaObject$print()}}
+\item \href{#method-MultiMediaObject-clone}{\code{MultiMediaObject$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-new"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$new(
+  sourceSystem,
+  sourceSystemId,
+  recordURI,
+  id,
+  sourceInstitutionID,
+  sourceID,
+  owner,
+  licenseType,
+  license,
+  unitID,
+  collectionType,
+  title,
+  caption,
+  description,
+  serviceAccessPoints,
+  type,
+  taxonCount,
+  creator,
+  copyrightText,
+  associatedSpecimenReference,
+  associatedTaxonReference,
+  multiMediaPublic,
+  subjectParts,
+  subjectOrientations,
+  phasesOrStages,
+  sexes,
+  gatheringEvents,
+  identifications,
+  theme,
+  associatedSpecimen,
+  associatedTaxon
+)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$fromList(MultiMediaObjectList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$fromJSONString(MultiMediaObjectJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-print"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MultiMediaObject-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-MultiMediaObject-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MultiMediaObject$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor MultiMediaObject object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(MultiMediaObjectList)}}{
-
-  Create MultiMediaObject object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of MultiMediaObject.
-
-}
-\item{\code{fromJSONString(MultiMediaObjectJson)}}{
-
-  Create MultiMediaObject object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of MultiMediaObject.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

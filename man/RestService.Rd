@@ -4,7 +4,11 @@
 \name{RestService}
 \alias{RestService}
 \title{RestService Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # RestService$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for RestService objects.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor RestService object.
+
+}
+\item{\code{$fromList(RestServiceList)}}{
+
+Create RestService object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of RestService.
+
+}
+\item{\code{fromJSONString(RestServiceJson)}}{
+
+Create RestService object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of RestService.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{endPoint}}{character}
 
@@ -30,39 +67,90 @@ Model class for RestService objects.
 \item{\code{produces}}{character}
 
 \item{\code{url}}{character}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-RestService-new}{\code{RestService$new()}}
+\item \href{#method-RestService-toList}{\code{RestService$toList()}}
+\item \href{#method-RestService-fromList}{\code{RestService$fromList()}}
+\item \href{#method-RestService-toJSONString}{\code{RestService$toJSONString()}}
+\item \href{#method-RestService-fromJSONString}{\code{RestService$fromJSONString()}}
+\item \href{#method-RestService-print}{\code{RestService$print()}}
+\item \href{#method-RestService-clone}{\code{RestService$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-new"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$new(endPoint, method, consumes, produces, url)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$fromList(RestServiceList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$fromJSONString(RestServiceJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-print"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-RestService-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-RestService-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{RestService$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor RestService object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(RestServiceList)}}{
-
-  Create RestService object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of RestService.
-
-}
-\item{\code{fromJSONString(RestServiceJson)}}{
-
-  Create RestService object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of RestService.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

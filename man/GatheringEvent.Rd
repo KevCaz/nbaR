@@ -4,7 +4,11 @@
 \name{GatheringEvent}
 \alias{GatheringEvent}
 \title{GatheringEvent Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # GatheringEvent$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for GatheringEvent objects.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor GatheringEvent object.
+
+}
+\item{\code{$fromList(GatheringEventList)}}{
+
+Create GatheringEvent object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of GatheringEvent.
+
+}
+\item{\code{fromJSONString(GatheringEventJson)}}{
+
+Create GatheringEvent object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of GatheringEvent.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{projectTitle}}{character}
 
@@ -74,39 +111,118 @@ Model class for GatheringEvent objects.
 \item{\code{lithoStratigraphy}}{list(LithoStratigraphy)}
 
 \item{\code{bioStratigraphic}}{list(BioStratigraphy)}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-GatheringEvent-new}{\code{GatheringEvent$new()}}
+\item \href{#method-GatheringEvent-toList}{\code{GatheringEvent$toList()}}
+\item \href{#method-GatheringEvent-fromList}{\code{GatheringEvent$fromList()}}
+\item \href{#method-GatheringEvent-toJSONString}{\code{GatheringEvent$toJSONString()}}
+\item \href{#method-GatheringEvent-fromJSONString}{\code{GatheringEvent$fromJSONString()}}
+\item \href{#method-GatheringEvent-print}{\code{GatheringEvent$print()}}
+\item \href{#method-GatheringEvent-clone}{\code{GatheringEvent$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-new"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$new(
+  projectTitle,
+  worldRegion,
+  continent,
+  country,
+  iso3166Code,
+  provinceState,
+  island,
+  locality,
+  city,
+  sublocality,
+  localityText,
+  dateTimeBegin,
+  dateTimeEnd,
+  method,
+  altitude,
+  altitudeUnifOfMeasurement,
+  biotopeText,
+  depth,
+  depthUnitOfMeasurement,
+  gatheringPersons,
+  gatheringOrganizations,
+  siteCoordinates,
+  namedAreas,
+  associatedTaxa,
+  chronoStratigraphy,
+  lithoStratigraphy,
+  bioStratigraphic
+)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$fromList(GatheringEventList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$fromJSONString(GatheringEventJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-print"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-GatheringEvent-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-GatheringEvent-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{GatheringEvent$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor GatheringEvent object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(GatheringEventList)}}{
-
-  Create GatheringEvent object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of GatheringEvent.
-
-}
-\item{\code{fromJSONString(GatheringEventJson)}}{
-
-  Create GatheringEvent object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of GatheringEvent.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

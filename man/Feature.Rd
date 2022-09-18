@@ -4,7 +4,11 @@
 \name{Feature}
 \alias{Feature}
 \title{Feature Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # Feature$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for Feature objects.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor Feature object.
+
+}
+\item{\code{$fromList(FeatureList)}}{
+
+Create Feature object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of Feature.
+
+}
+\item{\code{fromJSONString(FeatureJson)}}{
+
+Create Feature object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of Feature.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{crs}}{Crs}
 
@@ -30,39 +67,90 @@ Model class for Feature objects.
 \item{\code{geometry}}{list}
 
 \item{\code{id}}{character}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Feature-new}{\code{Feature$new()}}
+\item \href{#method-Feature-toList}{\code{Feature$toList()}}
+\item \href{#method-Feature-fromList}{\code{Feature$fromList()}}
+\item \href{#method-Feature-toJSONString}{\code{Feature$toJSONString()}}
+\item \href{#method-Feature-fromJSONString}{\code{Feature$fromJSONString()}}
+\item \href{#method-Feature-print}{\code{Feature$print()}}
+\item \href{#method-Feature-clone}{\code{Feature$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$new(crs, bbox, properties, geometry, id)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$fromList(FeatureList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$fromJSONString(FeatureJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Feature-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Feature-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Feature$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor Feature object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(FeatureList)}}{
-
-  Create Feature object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of Feature.
-
-}
-\item{\code{fromJSONString(FeatureJson)}}{
-
-  Create Feature object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of Feature.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

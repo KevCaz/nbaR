@@ -4,7 +4,11 @@
 \name{DefaultClassification}
 \alias{DefaultClassification}
 \title{DefaultClassification Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # DefaultClassification$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for DefaultClassification objects.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor DefaultClassification object.
+
+}
+\item{\code{$fromList(DefaultClassificationList)}}{
+
+Create DefaultClassification object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of DefaultClassification.
+
+}
+\item{\code{fromJSONString(DefaultClassificationJson)}}{
+
+Create DefaultClassification object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of DefaultClassification.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{kingdom}}{character}
 
@@ -42,39 +79,105 @@ Model class for DefaultClassification objects.
 \item{\code{infraspecificEpithet}}{character}
 
 \item{\code{infraspecificRank}}{character}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-DefaultClassification-new}{\code{DefaultClassification$new()}}
+\item \href{#method-DefaultClassification-toList}{\code{DefaultClassification$toList()}}
+\item \href{#method-DefaultClassification-fromList}{\code{DefaultClassification$fromList()}}
+\item \href{#method-DefaultClassification-toJSONString}{\code{DefaultClassification$toJSONString()}}
+\item \href{#method-DefaultClassification-fromJSONString}{\code{DefaultClassification$fromJSONString()}}
+\item \href{#method-DefaultClassification-print}{\code{DefaultClassification$print()}}
+\item \href{#method-DefaultClassification-clone}{\code{DefaultClassification$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-new"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$new(
+  kingdom,
+  phylum,
+  className,
+  order,
+  superFamily,
+  family,
+  genus,
+  subgenus,
+  specificEpithet,
+  infraspecificEpithet,
+  infraspecificRank
+)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$fromList(DefaultClassificationList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$fromJSONString(
+  DefaultClassificationJson,
+  typeMapping = NULL
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-print"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-DefaultClassification-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-DefaultClassification-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{DefaultClassification$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor DefaultClassification object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(DefaultClassificationList)}}{
-
-  Create DefaultClassification object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of DefaultClassification.
-
-}
-\item{\code{fromJSONString(DefaultClassificationJson)}}{
-
-  Create DefaultClassification object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of DefaultClassification.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

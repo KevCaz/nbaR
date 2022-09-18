@@ -34,6 +34,7 @@ data(shark_tree)
 chronos_calib(sp, shark_tree, "genus")
 }
 \seealso{
-Other utils: \code{\link{geo_age}}
+Other utils: 
+\code{\link{geo_age}()}
 }
 \concept{utils}

@@ -1,15 +1,10 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^.*\.swagger-codegen-ignore$
-^.*\.swagger-codegen$
-^.*\.travis\.yml$
-^.*other/.*$
-^.*other/swagger/codegen/nbaRcodegen/\.classpath$
+^inst/other/.*$
 ^codemeta\.json$
 ^docs$
 ^_pkgdown\.yml$
 ^.gitignore
-^paper/
-^tic\.R$
 ^vignettes/sharks\.Rmd$
 ^vignettes/tomato\.Rmd$

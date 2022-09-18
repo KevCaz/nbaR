@@ -4,7 +4,11 @@
 \name{Specimen}
 \alias{Specimen}
 \title{Specimen Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # Specimen$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for Specimen objects. This class models a Specimen record. Specimen records constitute the core of data served by the NBA. They can be unambiguously distinguished by the field unitID. Further fields include (among others) information about finding place, identification, and multimedia content.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor Specimen object.
+
+}
+\item{\code{$fromList(SpecimenList)}}{
+
+Create Specimen object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of Specimen.
+
+}
+\item{\code{fromJSONString(SpecimenJson)}}{
+
+Create Specimen object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of Specimen.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{sourceSystem}}{SourceSystem}
 
@@ -85,39 +122,123 @@ The unique identifier of the specimen.}
 \item{\code{associatedMultiMediaUris}}{list(ServiceAccessPoint)}
 
 \item{\code{theme}}{list(character)}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Specimen-new}{\code{Specimen$new()}}
+\item \href{#method-Specimen-toList}{\code{Specimen$toList()}}
+\item \href{#method-Specimen-fromList}{\code{Specimen$fromList()}}
+\item \href{#method-Specimen-toJSONString}{\code{Specimen$toJSONString()}}
+\item \href{#method-Specimen-fromJSONString}{\code{Specimen$fromJSONString()}}
+\item \href{#method-Specimen-print}{\code{Specimen$print()}}
+\item \href{#method-Specimen-clone}{\code{Specimen$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$new(
+  sourceSystem,
+  sourceSystemId,
+  recordURI,
+  id,
+  unitID,
+  unitGUID,
+  collectorsFieldNumber,
+  assemblageID,
+  sourceInstitutionID,
+  sourceID,
+  previousSourceID,
+  owner,
+  licenseType,
+  license,
+  recordBasis,
+  kindOfUnit,
+  collectionType,
+  sex,
+  phaseOrStage,
+  title,
+  notes,
+  preparationType,
+  previousUnitsText,
+  numberOfSpecimen,
+  fromCaptivity,
+  objectPublic,
+  multiMediaPublic,
+  acquiredFrom,
+  gatheringEvent,
+  identifications,
+  associatedMultiMediaUris,
+  theme
+)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$fromList(SpecimenList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$fromJSONString(SpecimenJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Specimen-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Specimen-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Specimen$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor Specimen object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(SpecimenList)}}{
-
-  Create Specimen object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of Specimen.
-
-}
-\item{\code{fromJSONString(SpecimenJson)}}{
-
-  Create Specimen object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of Specimen.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

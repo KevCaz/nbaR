@@ -4,8 +4,7 @@
 \alias{multimedia_download_query}
 \title{Dynamic download service: Query for multimedia objects and return result as a stream ...}
 \usage{
-multimedia_download_query(collectionType = NULL, queryParams = list(),
-  ...)
+multimedia_download_query(collectionType = NULL, queryParams = list(), ...)
 }
 \arguments{
 \item{collectionType}{Example query param, type:}
@@ -22,18 +21,19 @@ from class \code{ MultimediaClient}.
 Query with query parameters or querySpec JSON. ...
 }
 \seealso{
-Other nbaR.MultimediaClient-wrappers: \code{\link{multimedia_count_distinct_values_per_group}},
-  \code{\link{multimedia_count_distinct_values}},
-  \code{\link{multimedia_count}},
-  \code{\link{multimedia_find_by_ids}},
-  \code{\link{multimedia_find}},
-  \code{\link{multimedia_get_distinct_values_per_group}},
-  \code{\link{multimedia_get_distinct_values}},
-  \code{\link{multimedia_get_field_info}},
-  \code{\link{multimedia_get_paths}},
-  \code{\link{multimedia_get_settings}},
-  \code{\link{multimedia_get_setting}},
-  \code{\link{multimedia_is_operator_allowed}},
-  \code{\link{multimedia_query}}
+Other nbaR.MultimediaClient-wrappers: 
+\code{\link{multimedia_count_distinct_values_per_group}()},
+\code{\link{multimedia_count_distinct_values}()},
+\code{\link{multimedia_count}()},
+\code{\link{multimedia_find_by_ids}()},
+\code{\link{multimedia_find}()},
+\code{\link{multimedia_get_distinct_values_per_group}()},
+\code{\link{multimedia_get_distinct_values}()},
+\code{\link{multimedia_get_field_info}()},
+\code{\link{multimedia_get_paths}()},
+\code{\link{multimedia_get_settings}()},
+\code{\link{multimedia_get_setting}()},
+\code{\link{multimedia_is_operator_allowed}()},
+\code{\link{multimedia_query}()}
 }
 \concept{nbaR.MultimediaClient-wrappers}

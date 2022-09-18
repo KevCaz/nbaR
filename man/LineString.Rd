@@ -4,7 +4,11 @@
 \name{LineString}
 \alias{LineString}
 \title{LineString Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # LineString$new()
 }
@@ -18,47 +22,131 @@ the NBA model and endpoints reference at
 \details{
 Model class for LineString objects.
 }
-\section{Fields}{
-
-\describe{
-\item{\code{crs}}{Crs}
-
-\item{\code{bbox}}{list(numeric)}
-
-\item{\code{coordinates}}{list(LngLatAlt)}
-}}
-
 \section{Methods}{
 
 \describe{
 
 \item{\code{$new()}}{
 
-  Constructor LineString object.
+Constructor LineString object.
 
 }
 \item{\code{$fromList(LineStringList)}}{
 
-  Create LineString object from list.
+Create LineString object from list.
 
 }
 
 \item{\code{$toList()}}{
 
-  Get list representation of LineString.
+Get list representation of LineString.
 
 }
 \item{\code{fromJSONString(LineStringJson)}}{
 
-  Create LineString object from JSON.
+Create LineString object from JSON.
 
 }
 \item{\code{toJSONString(pretty=TRUE)}}{
 
-  Get JSON representation of LineString.
+Get JSON representation of LineString.
 
 }
 }
 }
 
-\keyword{datasets}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{crs}}{Crs}
+
+\item{\code{bbox}}{list(numeric)}
+
+\item{\code{coordinates}}{list(LngLatAlt)}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-LineString-new}{\code{LineString$new()}}
+\item \href{#method-LineString-toList}{\code{LineString$toList()}}
+\item \href{#method-LineString-fromList}{\code{LineString$fromList()}}
+\item \href{#method-LineString-toJSONString}{\code{LineString$toJSONString()}}
+\item \href{#method-LineString-fromJSONString}{\code{LineString$fromJSONString()}}
+\item \href{#method-LineString-print}{\code{LineString$print()}}
+\item \href{#method-LineString-clone}{\code{LineString$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-new"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$new(crs, bbox, coordinates)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$fromList(LineStringList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$fromJSONString(LineStringJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-print"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-LineString-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-LineString-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{LineString$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

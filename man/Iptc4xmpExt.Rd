@@ -4,7 +4,11 @@
 \name{Iptc4xmpExt}
 \alias{Iptc4xmpExt}
 \title{Iptc4xmpExt Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # Iptc4xmpExt$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for Iptc4xmpExt objects.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor Iptc4xmpExt object.
+
+}
+\item{\code{$fromList(Iptc4xmpExtList)}}{
+
+Create Iptc4xmpExt object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of Iptc4xmpExt.
+
+}
+\item{\code{fromJSONString(Iptc4xmpExtJson)}}{
+
+Create Iptc4xmpExt object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of Iptc4xmpExt.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{locationShown}}{character}
 
@@ -34,39 +71,98 @@ Model class for Iptc4xmpExt objects.
 \item{\code{city}}{character}
 
 \item{\code{sublocation}}{character}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Iptc4xmpExt-new}{\code{Iptc4xmpExt$new()}}
+\item \href{#method-Iptc4xmpExt-toList}{\code{Iptc4xmpExt$toList()}}
+\item \href{#method-Iptc4xmpExt-fromList}{\code{Iptc4xmpExt$fromList()}}
+\item \href{#method-Iptc4xmpExt-toJSONString}{\code{Iptc4xmpExt$toJSONString()}}
+\item \href{#method-Iptc4xmpExt-fromJSONString}{\code{Iptc4xmpExt$fromJSONString()}}
+\item \href{#method-Iptc4xmpExt-print}{\code{Iptc4xmpExt$print()}}
+\item \href{#method-Iptc4xmpExt-clone}{\code{Iptc4xmpExt$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$new(
+  locationShown,
+  worldRegion,
+  countryCode,
+  countryName,
+  provinceState,
+  city,
+  sublocation
+)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$fromList(Iptc4xmpExtList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$fromJSONString(Iptc4xmpExtJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Iptc4xmpExt-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Iptc4xmpExt-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Iptc4xmpExt$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor Iptc4xmpExt object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(Iptc4xmpExtList)}}{
-
-  Create Iptc4xmpExt object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of Iptc4xmpExt.
-
-}
-\item{\code{fromJSONString(Iptc4xmpExtJson)}}{
-
-  Create Iptc4xmpExt object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of Iptc4xmpExt.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}

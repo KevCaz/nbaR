@@ -4,13 +4,16 @@
 \alias{specimen_dwca_query}
 \title{Dynamic download service: Query for specimens and return result as Darwin Core Archive File}
 \usage{
-specimen_dwca_query(queryParams = list(), filename = format(Sys.time(),
-  "download-\%Y-\%m-\%dT\%H:\%m.zip"), ...)
+specimen_dwca_query(
+  queryParams = list(),
+  filename = format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip"),
+  ...
+)
 }
 \arguments{
 \item{queryParams}{Named list or vector with names being the fields to be queried and values being the values to match}
 
-\item{filename}{Filename to save results to, defaults to `format(Sys.time(),"download-\%Y-\%m-\%dT\%H:\%m.zip")`}
+\item{filename}{Filename to save results to, defaults to \code{format(Sys.time(),"download-\\\%Y-\\\%m-\\\%dT\\\%H:\\\%m.zip")}}
 
 \item{...}{additional parameters passed to dwca_query from class nbaR.SpecimenClient}
 }
@@ -22,26 +25,27 @@ from class \code{ SpecimenClient}.
 Query with query parameters or querySpec JSON. Response saved to nba-specimens.dwca.zip
 }
 \seealso{
-Other nbaR.SpecimenClient-wrappers: \code{\link{specimen_count_distinct_values_per_group}},
-  \code{\link{specimen_count_distinct_values}},
-  \code{\link{specimen_count}},
-  \code{\link{specimen_download_query}},
-  \code{\link{specimen_dwca_get_data_set_names}},
-  \code{\link{specimen_dwca_get_data_set}},
-  \code{\link{specimen_exists}},
-  \code{\link{specimen_find_by_ids}},
-  \code{\link{specimen_find_by_unit_id}},
-  \code{\link{specimen_find}},
-  \code{\link{specimen_get_distinct_values_per_group}},
-  \code{\link{specimen_get_distinct_values}},
-  \code{\link{specimen_get_field_info}},
-  \code{\link{specimen_get_ids_in_collection}},
-  \code{\link{specimen_get_named_collections}},
-  \code{\link{specimen_get_paths}},
-  \code{\link{specimen_get_settings}},
-  \code{\link{specimen_get_setting}},
-  \code{\link{specimen_group_by_scientific_name}},
-  \code{\link{specimen_is_operator_allowed}},
-  \code{\link{specimen_query}}
+Other nbaR.SpecimenClient-wrappers: 
+\code{\link{specimen_count_distinct_values_per_group}()},
+\code{\link{specimen_count_distinct_values}()},
+\code{\link{specimen_count}()},
+\code{\link{specimen_download_query}()},
+\code{\link{specimen_dwca_get_data_set_names}()},
+\code{\link{specimen_dwca_get_data_set}()},
+\code{\link{specimen_exists}()},
+\code{\link{specimen_find_by_ids}()},
+\code{\link{specimen_find_by_unit_id}()},
+\code{\link{specimen_find}()},
+\code{\link{specimen_get_distinct_values_per_group}()},
+\code{\link{specimen_get_distinct_values}()},
+\code{\link{specimen_get_field_info}()},
+\code{\link{specimen_get_ids_in_collection}()},
+\code{\link{specimen_get_named_collections}()},
+\code{\link{specimen_get_paths}()},
+\code{\link{specimen_get_settings}()},
+\code{\link{specimen_get_setting}()},
+\code{\link{specimen_group_by_scientific_name}()},
+\code{\link{specimen_is_operator_allowed}()},
+\code{\link{specimen_query}()}
 }
 \concept{nbaR.SpecimenClient-wrappers}

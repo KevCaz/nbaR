@@ -4,7 +4,11 @@
 \name{TaxonDescription}
 \alias{TaxonDescription}
 \title{TaxonDescription Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # TaxonDescription$new()
 }
@@ -18,47 +22,131 @@ the NBA model and endpoints reference at
 \details{
 Model class for TaxonDescription objects.
 }
-\section{Fields}{
-
-\describe{
-\item{\code{category}}{character}
-
-\item{\code{description}}{character}
-
-\item{\code{language}}{character}
-}}
-
 \section{Methods}{
 
 \describe{
 
 \item{\code{$new()}}{
 
-  Constructor TaxonDescription object.
+Constructor TaxonDescription object.
 
 }
 \item{\code{$fromList(TaxonDescriptionList)}}{
 
-  Create TaxonDescription object from list.
+Create TaxonDescription object from list.
 
 }
 
 \item{\code{$toList()}}{
 
-  Get list representation of TaxonDescription.
+Get list representation of TaxonDescription.
 
 }
 \item{\code{fromJSONString(TaxonDescriptionJson)}}{
 
-  Create TaxonDescription object from JSON.
+Create TaxonDescription object from JSON.
 
 }
 \item{\code{toJSONString(pretty=TRUE)}}{
 
-  Get JSON representation of TaxonDescription.
+Get JSON representation of TaxonDescription.
 
 }
 }
 }
 
-\keyword{datasets}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{category}}{character}
+
+\item{\code{description}}{character}
+
+\item{\code{language}}{character}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-TaxonDescription-new}{\code{TaxonDescription$new()}}
+\item \href{#method-TaxonDescription-toList}{\code{TaxonDescription$toList()}}
+\item \href{#method-TaxonDescription-fromList}{\code{TaxonDescription$fromList()}}
+\item \href{#method-TaxonDescription-toJSONString}{\code{TaxonDescription$toJSONString()}}
+\item \href{#method-TaxonDescription-fromJSONString}{\code{TaxonDescription$fromJSONString()}}
+\item \href{#method-TaxonDescription-print}{\code{TaxonDescription$print()}}
+\item \href{#method-TaxonDescription-clone}{\code{TaxonDescription$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-new"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$new(category, description, language)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$fromList(TaxonDescriptionList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$fromJSONString(TaxonDescriptionJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-print"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonDescription-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonDescription-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonDescription$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

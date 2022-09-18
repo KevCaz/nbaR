@@ -4,7 +4,9 @@
 \name{TaxonClient}
 \alias{TaxonClient}
 \title{Taxon operations}
-\format{R6 class}
+\format{
+R6 class
+}
 \usage{
 # client <- TaxonClient$new()
 }
@@ -15,306 +17,600 @@ of the NBA. Each endpoint is available as a class method
 pointing to a NBA server and a user Agent can be specified
 by the user (see section 'Fields' below).
 }
-\section{Fields}{
-
-\describe{
-\item{\code{basePath}}{Stores url path of the request, defaults to http://api.biodiversitydata.nl/v2}
-
-\item{\code{userAgent}}{Set the user agent of the request, defaults to nbaR/0.1.0}
-}}
-
 \section{Methods}{
 
 \describe{
 \item{\code{ count }}{
 
-  Get the number of taxa matching a given condition;
-  Conditions given as query parameters or a querySpec JSON.
+Get the number of taxa matching a given condition;
+Conditions given as query parameters or a querySpec JSON.
 
-    Parameters:
-    \itemize{
-        \item \code{ query_spec } : Object of type QuerySpec or its JSON representation
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
+    \\item \code{ query_spec } : Object of type QuerySpec or its JSON representation
 
-        \item \code{ queryParams } : named list or vector with query parameters
+    \\item \code{ queryParams } : named list or vector with query parameters
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ integer }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ integer }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ count_distinct_values }}{
 
-  Count the distinct number of values that exist for a given field;
-  See also endpoint /getDistinctValues.
+Count the distinct number of values that exist for a given field;
+See also endpoint /getDistinctValues.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ field } : name of field in the taxon object
+    \\item \code{ field } : name of field in the taxon object
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ count_distinct_values_per_group }}{
 
-  Count the distinct number of field values that exist per the given field to group by;
-  See also endpoint /getDistinctValuesPerGroup.
+Count the distinct number of field values that exist per the given field to group by;
+See also endpoint /getDistinctValuesPerGroup.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ group } : name of field in the taxon object you want to group by \item \code{ field } : name of field in the taxon object
+    \\item \code{ group } : name of field in the taxon object you want to group by \\item \code{ field } : name of field in the taxon object
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ download_query }}{
 
-  Dynamic download service: Query for taxa and return result as a stream ...;
-  Query with query parameters or querySpec JSON. ....
+Dynamic download service: Query for taxa and return result as a stream ...;
+Query with query parameters or querySpec JSON. ....
 
-    Parameters:
-    \itemize{
-        \item \code{ query_spec } : Object of type QuerySpec or its JSON representation
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
+    \\item \code{ query_spec } : Object of type QuerySpec or its JSON representation
 
-        \item \code{ queryParams } : named list or vector with query parameters
+    \\item \code{ queryParams } : named list or vector with query parameters
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ Taxon }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ Taxon }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ dwca_get_data_set }}{
 
-  Download dataset as Darwin Core Archive File;
-  Available datasets can be queried with /taxon/dwca/getDataSetNames. Response saved to &lt;datasetname&gt;-&lt;yyyymmdd&gt;.dwca.zip.
+Download dataset as Darwin Core Archive File;
+Available datasets can be queried with /taxon/dwca/getDataSetNames. Response saved to <datasetname>-<yyyymmdd>.dwca.zip.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ dataset } : name of dataset
+    \\item \code{ dataset } : name of dataset
 
-        \item \code{ filename } : location to save data, defaults to \code{format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip")}
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{  }
+    \\item \code{ filename } : location to save data, defaults to \code{format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip")}
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{  }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ dwca_get_data_set_names }}{
 
-  Retrieve the names of all available datasets;
-  Individual datasets can then be downloaded with /dwca/getDataSet/{dataset}.
+Retrieve the names of all available datasets;
+Individual datasets can then be downloaded with /dwca/getDataSet/{dataset}.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ dwca_query }}{
 
-  Dynamic download service: Query for taxa and return result as Darwin Core Archive File;
-  Query with query parameters or querySpec JSON. Response saved to nba-taxa.dwca.zip.
+Dynamic download service: Query for taxa and return result as Darwin Core Archive File;
+Query with query parameters or querySpec JSON. Response saved to nba-taxa.dwca.zip.
 
-    Parameters:
-    \itemize{
-        \item \code{ query_spec } : Object of type QuerySpec or its JSON representation
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
+    \\item \code{ query_spec } : Object of type QuerySpec or its JSON representation
 
-        \item \code{ queryParams } : named list or vector with query parameters
-        \item \code{ filename } : location to save data, defaults to \code{format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip")}
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{  }
+    \\item \code{ queryParams } : named list or vector with query parameters
+    \\item \code{ filename } : location to save data, defaults to \code{format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip")}
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{  }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ find }}{
 
-  Find a taxon by id;
-  If found, returns a single taxon.
+Find a taxon by id;
+If found, returns a single taxon.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ id } : id of taxon
+    \\item \code{ id } : id of taxon
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ Taxon }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ Taxon }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ find_by_ids }}{
 
-  Find taxa by ids;
-  Given multiple ids, returns a list of taxa.
+Find taxa by ids;
+Given multiple ids, returns a list of taxa.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ ids } : ids of multiple taxa, separated by comma
+    \\item \code{ ids } : ids of multiple taxa, separated by comma
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ Taxon }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ Taxon }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_distinct_values }}{
 
-  Get all different values that can be found for one field;
-  A list of all fields for taxon documents can be retrieved with /metadata/getFieldInfo.
+Get all different values that can be found for one field;
+A list of all fields for taxon documents can be retrieved with /metadata/getFieldInfo.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ field } : name of field in a taxon object
+    \\item \code{ field } : name of field in a taxon object
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_distinct_values_per_group }}{
 
-  Get all distinct values (and their document count) for the field given divided per distinct value of the field to group by;
-  See also endpoint /getDistinctValues.
+Get all distinct values (and their document count) for the field given divided per distinct value of the field to group by;
+See also endpoint /getDistinctValues.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ group } : name of field in the taxon object you want to group by \item \code{ field } : name of field in the taxon object
+    \\item \code{ group } : name of field in the taxon object you want to group by \\item \code{ field } : name of field in the taxon object
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_field_info }}{
 
-  Returns extended information for each field of a specimen document;
-  Info consists of whether the fields is indexed, the ElasticSearch datatype and a list of allowed operators.
+Returns extended information for each field of a specimen document;
+Info consists of whether the fields is indexed, the ElasticSearch datatype and a list of allowed operators.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_paths }}{
 
-  Returns the full path of all fields within a document;
-  See also metadata/getFieldInfo for all allowed operators per field.
+Returns the full path of all fields within a document;
+See also metadata/getFieldInfo for all allowed operators per field.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_setting }}{
 
-  Get the value of an NBA setting;
-  All settings can be queried with /metadata/getSettings.
+Get the value of an NBA setting;
+All settings can be queried with /metadata/getSettings.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ name } : name of setting
+    \\item \code{ name } : name of setting
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_settings }}{
 
-  List all publicly available configuration settings for the NBA;
-  The value of a specific setting can be queried with metadata/getSetting/{name}.
+List all publicly available configuration settings for the NBA;
+The value of a specific setting can be queried with metadata/getSetting/{name}.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ group_by_scientific_name }}{
 
-  Aggregates Taxon and Specimen documents according to their scientific names;
-  Returns a list with ScientificNameGroups, which contain Taxon and Specimen documents that share a scientific name.
+Aggregates Taxon and Specimen documents according to their scientific names;
+Returns a list with ScientificNameGroups, which contain Taxon and Specimen documents that share a scientific name.
 
-    Parameters:
-    \itemize{
-        \item \code{ query_spec } : Object of type QuerySpec or its JSON representation
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
+    \\item \code{ query_spec } : Object of type QuerySpec or its JSON representation
 
-        \item \code{ queryParams } : named list or vector with query parameters
+    \\item \code{ queryParams } : named list or vector with query parameters
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ QueryResult }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ QueryResult }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ is_operator_allowed }}{
 
-  Checks if a given operator is allowed for a given field;
-  See also metadata/getFieldInfo.
+Checks if a given operator is allowed for a given field;
+See also metadata/getFieldInfo.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ field } : specimen document field \item \code{ operator } : operator
+    \\item \code{ field } : specimen document field \\item \code{ operator } : operator
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ query }}{
 
-  Query for taxa;
-  Search for taxa (GET) using query parameters or a querySpec JSON.
+Query for taxa;
+Search for taxa (GET) using query parameters or a querySpec JSON.
 
-    Parameters:
-    \itemize{
-        \item \code{ query_spec } : Object of type QuerySpec or its JSON representation
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
+    \\item \code{ query_spec } : Object of type QuerySpec or its JSON representation
 
-        \item \code{ queryParams } : named list or vector with query parameters
+    \\item \code{ queryParams } : named list or vector with query parameters
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ QueryResult }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ QueryResult }
+}\if{html}{\out{</div>}}
+
 }
 }
 }
 
-\keyword{datasets}
+\section{Super class}{
+\code{\link[nbaR:ApiClient]{nbaR::ApiClient}} -> \code{TaxonClient}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{basePath}}{Stores url path of the request, defaults to http://api.biodiversitydata.nl/v2}
+
+\item{\code{userAgent}}{Set the user agent of the request, defaults to nbaR/0.1.0}
+}
+\if{html}{\out{</div>}}
+}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{basePath}}{Stores url path of the request, defaults to http://api.biodiversitydata.nl/v2}
+
+\item{\code{userAgent}}{Set the user agent of the request, defaults to nbaR/0.1.0}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-TaxonClient-new}{\code{TaxonClient$new()}}
+\item \href{#method-TaxonClient-count}{\code{TaxonClient$count()}}
+\item \href{#method-TaxonClient-count_distinct_values}{\code{TaxonClient$count_distinct_values()}}
+\item \href{#method-TaxonClient-count_distinct_values_per_group}{\code{TaxonClient$count_distinct_values_per_group()}}
+\item \href{#method-TaxonClient-download_query}{\code{TaxonClient$download_query()}}
+\item \href{#method-TaxonClient-dwca_get_data_set}{\code{TaxonClient$dwca_get_data_set()}}
+\item \href{#method-TaxonClient-dwca_get_data_set_names}{\code{TaxonClient$dwca_get_data_set_names()}}
+\item \href{#method-TaxonClient-dwca_query}{\code{TaxonClient$dwca_query()}}
+\item \href{#method-TaxonClient-find}{\code{TaxonClient$find()}}
+\item \href{#method-TaxonClient-find_by_ids}{\code{TaxonClient$find_by_ids()}}
+\item \href{#method-TaxonClient-get_distinct_values}{\code{TaxonClient$get_distinct_values()}}
+\item \href{#method-TaxonClient-get_distinct_values_per_group}{\code{TaxonClient$get_distinct_values_per_group()}}
+\item \href{#method-TaxonClient-get_field_info}{\code{TaxonClient$get_field_info()}}
+\item \href{#method-TaxonClient-get_paths}{\code{TaxonClient$get_paths()}}
+\item \href{#method-TaxonClient-get_setting}{\code{TaxonClient$get_setting()}}
+\item \href{#method-TaxonClient-get_settings}{\code{TaxonClient$get_settings()}}
+\item \href{#method-TaxonClient-group_by_scientific_name}{\code{TaxonClient$group_by_scientific_name()}}
+\item \href{#method-TaxonClient-is_operator_allowed}{\code{TaxonClient$is_operator_allowed()}}
+\item \href{#method-TaxonClient-query}{\code{TaxonClient$query()}}
+\item \href{#method-TaxonClient-print}{\code{TaxonClient$print()}}
+\item \href{#method-TaxonClient-clone}{\code{TaxonClient$clone()}}
+}
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="nbaR" data-topic="ApiClient" data-id="callApi"><a href='../../nbaR/html/ApiClient.html#method-ApiClient-callApi'><code>nbaR::ApiClient$callApi()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="nbaR" data-topic="ApiClient" data-id="handleError"><a href='../../nbaR/html/ApiClient.html#method-ApiClient-handleError'><code>nbaR::ApiClient$handleError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="nbaR" data-topic="ApiClient" data-id="ping"><a href='../../nbaR/html/ApiClient.html#method-ApiClient-ping'><code>nbaR::ApiClient$ping()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-new"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$new(basePath, userAgent)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-count"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-count}{}}}
+\subsection{Method \code{count()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$count(querySpec = NULL, queryParams = list(), ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-count_distinct_values"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-count_distinct_values}{}}}
+\subsection{Method \code{count_distinct_values()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$count_distinct_values(field = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-count_distinct_values_per_group"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-count_distinct_values_per_group}{}}}
+\subsection{Method \code{count_distinct_values_per_group()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$count_distinct_values_per_group(group = NULL, field = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-download_query"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-download_query}{}}}
+\subsection{Method \code{download_query()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$download_query(querySpec = NULL, queryParams = list(), ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-dwca_get_data_set"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-dwca_get_data_set}{}}}
+\subsection{Method \code{dwca_get_data_set()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$dwca_get_data_set(
+  dataset = NULL,
+  filename = format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip"),
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-dwca_get_data_set_names"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-dwca_get_data_set_names}{}}}
+\subsection{Method \code{dwca_get_data_set_names()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$dwca_get_data_set_names(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-dwca_query"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-dwca_query}{}}}
+\subsection{Method \code{dwca_query()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$dwca_query(
+  querySpec = NULL,
+  queryParams = list(),
+  filename = format(Sys.time(), "download-\%Y-\%m-\%dT\%H:\%m.zip"),
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-find"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-find}{}}}
+\subsection{Method \code{find()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$find(id = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-find_by_ids"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-find_by_ids}{}}}
+\subsection{Method \code{find_by_ids()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$find_by_ids(ids = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-get_distinct_values"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-get_distinct_values}{}}}
+\subsection{Method \code{get_distinct_values()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$get_distinct_values(field = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-get_distinct_values_per_group"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-get_distinct_values_per_group}{}}}
+\subsection{Method \code{get_distinct_values_per_group()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$get_distinct_values_per_group(group = NULL, field = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-get_field_info"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-get_field_info}{}}}
+\subsection{Method \code{get_field_info()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$get_field_info(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-get_paths"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-get_paths}{}}}
+\subsection{Method \code{get_paths()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$get_paths(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-get_setting"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-get_setting}{}}}
+\subsection{Method \code{get_setting()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$get_setting(name = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-get_settings"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-get_settings}{}}}
+\subsection{Method \code{get_settings()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$get_settings(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-group_by_scientific_name"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-group_by_scientific_name}{}}}
+\subsection{Method \code{group_by_scientific_name()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$group_by_scientific_name(
+  querySpec = NULL,
+  queryParams = list(),
+  ...
+)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-is_operator_allowed"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-is_operator_allowed}{}}}
+\subsection{Method \code{is_operator_allowed()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$is_operator_allowed(field = NULL, operator = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-query"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-query}{}}}
+\subsection{Method \code{query()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$query(querySpec = NULL, queryParams = list(), ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-print"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-TaxonClient-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-TaxonClient-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{TaxonClient$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

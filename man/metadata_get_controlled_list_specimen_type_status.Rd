@@ -2,11 +2,12 @@
 % Please edit documentation in R/MetadataClient-wrapper.r
 \name{metadata_get_controlled_list_specimen_type_status}
 \alias{metadata_get_controlled_list_specimen_type_status}
-\title{Get allowed values for the field &#39;SpecimenTypeStatus&#39; in a specimen document}
+\title{Get allowed values for the field 'SpecimenTypeStatus' in a specimen document}
 \usage{
-
-  metadata_get_controlled_list_specimen_type_status(returnType = "data.frame",
-  ...)
+metadata_get_controlled_list_specimen_type_status(
+  returnType = "data.frame",
+  ...
+)
 }
 \arguments{
 \item{returnType}{Either \code{list} or \code{data.frame} (default)}
@@ -24,14 +25,15 @@ from class \code{ MetadataClient}.
 See also endpoint /getControlledLists
 }
 \seealso{
-Other nbaR.MetadataClient-wrappers: \code{\link{metadata_get_allowed_date_formats}},
-  \code{\link{metadata_get_controlled_list_phase_or_stage}},
-  \code{\link{metadata_get_controlled_list_sex}},
-  \code{\link{metadata_get_controlled_list_taxonomic_status}},
-  \code{\link{metadata_get_controlled_lists}},
-  \code{\link{metadata_get_rest_services}},
-  \code{\link{metadata_get_settings}},
-  \code{\link{metadata_get_setting}},
-  \code{\link{metadata_get_source_systems}}
+Other nbaR.MetadataClient-wrappers: 
+\code{\link{metadata_get_allowed_date_formats}()},
+\code{\link{metadata_get_controlled_list_phase_or_stage}()},
+\code{\link{metadata_get_controlled_list_sex}()},
+\code{\link{metadata_get_controlled_list_taxonomic_status}()},
+\code{\link{metadata_get_controlled_lists}()},
+\code{\link{metadata_get_rest_services}()},
+\code{\link{metadata_get_settings}()},
+\code{\link{metadata_get_setting}()},
+\code{\link{metadata_get_source_systems}()}
 }
 \concept{nbaR.MetadataClient-wrappers}

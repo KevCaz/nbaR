@@ -4,7 +4,9 @@
 \name{shark_tree}
 \alias{shark_tree}
 \title{A molecular phylogeny of the sharks}
-\format{An object of class \code{phylo}}
+\format{
+An object of class \code{phylo}
+}
 \usage{
 shark_tree
 }
@@ -23,7 +25,7 @@ plot(shark_tree, cex=0.1)
 Vélez-Zuazo & Agnarsson. Shark tales: A molecular species-level
 phylogeny of sharks (Selachimorpha, Chondrichthyes).
 Molecular Phylogenetics and Evolution 58:2, 207-217
-(\href{http://www.sciencedirect.com/science/article/pii/S1055790310004537}{Link})
+(\url{http://www.sciencedirect.com/science/article/pii/S1055790310004537})
 }
 \keyword{datasets}
 \keyword{phylogeny}

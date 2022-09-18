@@ -28,6 +28,7 @@ geo_age('lower miocene')
 geo_age(c("Miocene", "Pliocene"))
 }
 \seealso{
-Other utils: \code{\link{chronos_calib}}
+Other utils: 
+\code{\link{chronos_calib}()}
 }
 \concept{utils}

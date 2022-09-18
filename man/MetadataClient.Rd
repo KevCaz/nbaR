@@ -4,7 +4,9 @@
 \name{MetadataClient}
 \alias{MetadataClient}
 \title{Metadata operations}
-\format{R6 class}
+\format{
+R6 class
+}
 \usage{
 # client <- MetadataClient$new()
 }
@@ -15,178 +17,363 @@ of the NBA. Each endpoint is available as a class method
 pointing to a NBA server and a user Agent can be specified
 by the user (see section 'Fields' below).
 }
-\section{Fields}{
-
-\describe{
-\item{\code{basePath}}{Stores url path of the request, defaults to http://api.biodiversitydata.nl/v2}
-
-\item{\code{userAgent}}{Set the user agent of the request, defaults to nbaR/0.1.0}
-}}
-
 \section{Methods}{
 
 \describe{
 \item{\code{ get_allowed_date_formats }}{
 
-  Get allowed values for dates in queries;
-  Queries with other formatted dates will result in a query error.
+Get allowed values for dates in queries;
+Queries with other formatted dates will result in a query error.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_controlled_list_phase_or_stage }}{
 
-  Get allowed values for the field &#39;PhaseOrStage&#39; in a specimen document;
-  See also endpoint /getControlledLists.
+Get allowed values for the field 'PhaseOrStage' in a specimen document;
+See also endpoint /getControlledLists.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_controlled_list_sex }}{
 
-  Get allowed values for the field &#39;Sex&#39; in a specimen document;
-  See also endpoint /getControlledLists.
+Get allowed values for the field 'Sex' in a specimen document;
+See also endpoint /getControlledLists.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_controlled_list_specimen_type_status }}{
 
-  Get allowed values for the field &#39;SpecimenTypeStatus&#39; in a specimen document;
-  See also endpoint /getControlledLists.
+Get allowed values for the field 'SpecimenTypeStatus' in a specimen document;
+See also endpoint /getControlledLists.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_controlled_list_taxonomic_status }}{
 
-  Get allowed values for the field &#39;TaxonomicStatus&#39; in specimen and taxon documents;
-  See also endpoint /getControlledLists.
+Get allowed values for the field 'TaxonomicStatus' in specimen and taxon documents;
+See also endpoint /getControlledLists.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_controlled_lists }}{
 
-  Get the names of fields for which a controlled vocabulary exists;
-  Possible values for fields with controlled vocabularies can be queried with metadata/getControlledList/{field}.
+Get the names of fields for which a controlled vocabulary exists;
+Possible values for fields with controlled vocabularies can be queried with metadata/getControlledList/{field}.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ character }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ character }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_rest_services }}{
 
-  List all available REST services and their parameters;
-  Lists end point name, http method, response type, and URL.
+List all available REST services and their parameters;
+Lists end point name, http method, response type, and URL.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ RestService }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ RestService }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_setting }}{
 
-  Get the value of an NBA setting;
-  All settings can be queried with /metadata/getSettings.
+Get the value of an NBA setting;
+All settings can be queried with /metadata/getSettings.
 
-    Parameters:
-    \itemize{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
-        \item \code{ name } : name of setting
+    \\item \code{ name } : name of setting
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_settings }}{
 
-  List all publicly available configuration settings for the NBA;
-  The value of a specific setting can be queried with metadata/getSetting/{name}.
+List all publicly available configuration settings for the NBA;
+The value of a specific setting can be queried with metadata/getSetting/{name}.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ list }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ list }
+}\if{html}{\out{</div>}}
+
 }
 \item{\code{ get_source_systems }}{
 
-  Get the data sources from which the data was retrieved;
-  Returns code and name of all source systems.
+Get the data sources from which the data was retrieved;
+Returns code and name of all source systems.
 
-    Parameters:
-    \itemize{
-
-
+\if{html}{\out{<div class="sourceCode">}}\preformatted{Parameters:
+\\itemize\{
 
 
-        \item \code{ ... } : additional parameters passed to httr::GET
-    }
-    Returns:
-        \code{ SourceSystem }
+
+
+    \\item \code{ ... } : additional parameters passed to httr::GET
+\}
+Returns:
+    \code{ SourceSystem }
+}\if{html}{\out{</div>}}
+
 }
 }
 }
 
-\keyword{datasets}
+\section{Super class}{
+\code{\link[nbaR:ApiClient]{nbaR::ApiClient}} -> \code{MetadataClient}
+}
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
+\describe{
+\item{\code{basePath}}{Stores url path of the request, defaults to http://api.biodiversitydata.nl/v2}
+
+\item{\code{userAgent}}{Set the user agent of the request, defaults to nbaR/0.1.0}
+}
+\if{html}{\out{</div>}}
+}
+\section{Active bindings}{
+\if{html}{\out{<div class="r6-active-bindings">}}
+\describe{
+\item{\code{basePath}}{Stores url path of the request, defaults to http://api.biodiversitydata.nl/v2}
+
+\item{\code{userAgent}}{Set the user agent of the request, defaults to nbaR/0.1.0}
+}
+\if{html}{\out{</div>}}
+}
+\section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-MetadataClient-new}{\code{MetadataClient$new()}}
+\item \href{#method-MetadataClient-get_allowed_date_formats}{\code{MetadataClient$get_allowed_date_formats()}}
+\item \href{#method-MetadataClient-get_controlled_list_phase_or_stage}{\code{MetadataClient$get_controlled_list_phase_or_stage()}}
+\item \href{#method-MetadataClient-get_controlled_list_sex}{\code{MetadataClient$get_controlled_list_sex()}}
+\item \href{#method-MetadataClient-get_controlled_list_specimen_type_status}{\code{MetadataClient$get_controlled_list_specimen_type_status()}}
+\item \href{#method-MetadataClient-get_controlled_list_taxonomic_status}{\code{MetadataClient$get_controlled_list_taxonomic_status()}}
+\item \href{#method-MetadataClient-get_controlled_lists}{\code{MetadataClient$get_controlled_lists()}}
+\item \href{#method-MetadataClient-get_rest_services}{\code{MetadataClient$get_rest_services()}}
+\item \href{#method-MetadataClient-get_setting}{\code{MetadataClient$get_setting()}}
+\item \href{#method-MetadataClient-get_settings}{\code{MetadataClient$get_settings()}}
+\item \href{#method-MetadataClient-get_source_systems}{\code{MetadataClient$get_source_systems()}}
+\item \href{#method-MetadataClient-print}{\code{MetadataClient$print()}}
+\item \href{#method-MetadataClient-clone}{\code{MetadataClient$clone()}}
+}
+}
+\if{html}{\out{
+<details open><summary>Inherited methods</summary>
+<ul>
+<li><span class="pkg-link" data-pkg="nbaR" data-topic="ApiClient" data-id="callApi"><a href='../../nbaR/html/ApiClient.html#method-ApiClient-callApi'><code>nbaR::ApiClient$callApi()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="nbaR" data-topic="ApiClient" data-id="handleError"><a href='../../nbaR/html/ApiClient.html#method-ApiClient-handleError'><code>nbaR::ApiClient$handleError()</code></a></span></li>
+<li><span class="pkg-link" data-pkg="nbaR" data-topic="ApiClient" data-id="ping"><a href='../../nbaR/html/ApiClient.html#method-ApiClient-ping'><code>nbaR::ApiClient$ping()</code></a></span></li>
+</ul>
+</details>
+}}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-new"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$new(basePath, userAgent)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_allowed_date_formats"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_allowed_date_formats}{}}}
+\subsection{Method \code{get_allowed_date_formats()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_allowed_date_formats(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_controlled_list_phase_or_stage"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_controlled_list_phase_or_stage}{}}}
+\subsection{Method \code{get_controlled_list_phase_or_stage()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_controlled_list_phase_or_stage(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_controlled_list_sex"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_controlled_list_sex}{}}}
+\subsection{Method \code{get_controlled_list_sex()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_controlled_list_sex(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_controlled_list_specimen_type_status"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_controlled_list_specimen_type_status}{}}}
+\subsection{Method \code{get_controlled_list_specimen_type_status()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_controlled_list_specimen_type_status(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_controlled_list_taxonomic_status"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_controlled_list_taxonomic_status}{}}}
+\subsection{Method \code{get_controlled_list_taxonomic_status()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_controlled_list_taxonomic_status(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_controlled_lists"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_controlled_lists}{}}}
+\subsection{Method \code{get_controlled_lists()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_controlled_lists(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_rest_services"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_rest_services}{}}}
+\subsection{Method \code{get_rest_services()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_rest_services(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_setting"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_setting}{}}}
+\subsection{Method \code{get_setting()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_setting(name = NULL, ...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_settings"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_settings}{}}}
+\subsection{Method \code{get_settings()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_settings(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-get_source_systems"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-get_source_systems}{}}}
+\subsection{Method \code{get_source_systems()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$get_source_systems(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-print"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-MetadataClient-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-MetadataClient-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{MetadataClient$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
+\describe{
+\item{\code{deep}}{Whether to make a deep clone.}
+}
+\if{html}{\out{</div>}}
+}
+}
+}

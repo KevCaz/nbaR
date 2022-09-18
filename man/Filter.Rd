@@ -4,7 +4,11 @@
 \name{Filter}
 \alias{Filter}
 \title{Filter Class}
-\format{R6 class}
+\format{
+R6 class
+
+R6 class
+}
 \usage{
 # Filter$new()
 }
@@ -18,8 +22,41 @@ the NBA model and endpoints reference at
 \details{
 Model class for Filter objects.
 }
-\section{Fields}{
+\section{Methods}{
 
+\describe{
+
+\item{\code{$new()}}{
+
+Constructor Filter object.
+
+}
+\item{\code{$fromList(FilterList)}}{
+
+Create Filter object from list.
+
+}
+
+\item{\code{$toList()}}{
+
+Get list representation of Filter.
+
+}
+\item{\code{fromJSONString(FilterJson)}}{
+
+Create Filter object from JSON.
+
+}
+\item{\code{toJSONString(pretty=TRUE)}}{
+
+Get JSON representation of Filter.
+
+}
+}
+}
+
+\section{Public fields}{
+\if{html}{\out{<div class="r6-fields">}}
 \describe{
 \item{\code{acceptRegexp}}{character}
 
@@ -28,39 +65,90 @@ Model class for Filter objects.
 \item{\code{acceptValues}}{list(character)}
 
 \item{\code{rejectValues}}{list(character)}
-}}
-
+}
+\if{html}{\out{</div>}}
+}
 \section{Methods}{
+\subsection{Public methods}{
+\itemize{
+\item \href{#method-Filter-new}{\code{Filter$new()}}
+\item \href{#method-Filter-toList}{\code{Filter$toList()}}
+\item \href{#method-Filter-fromList}{\code{Filter$fromList()}}
+\item \href{#method-Filter-toJSONString}{\code{Filter$toJSONString()}}
+\item \href{#method-Filter-fromJSONString}{\code{Filter$fromJSONString()}}
+\item \href{#method-Filter-print}{\code{Filter$print()}}
+\item \href{#method-Filter-clone}{\code{Filter$clone()}}
+}
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-new"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-new}{}}}
+\subsection{Method \code{new()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$new(acceptRegexp, rejectRegexp, acceptValues, rejectValues)}\if{html}{\out{</div>}}
+}
 
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-toList"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-toList}{}}}
+\subsection{Method \code{toList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$toList()}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-fromList"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-fromList}{}}}
+\subsection{Method \code{fromList()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$fromList(FilterList, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-toJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-toJSONString}{}}}
+\subsection{Method \code{toJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$toJSONString(pretty = TRUE)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-fromJSONString"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-fromJSONString}{}}}
+\subsection{Method \code{fromJSONString()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$fromJSONString(FilterJson, typeMapping = NULL)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-print"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-print}{}}}
+\subsection{Method \code{print()}}{
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$print(...)}\if{html}{\out{</div>}}
+}
+
+}
+\if{html}{\out{<hr>}}
+\if{html}{\out{<a id="method-Filter-clone"></a>}}
+\if{latex}{\out{\hypertarget{method-Filter-clone}{}}}
+\subsection{Method \code{clone()}}{
+The objects of this class are cloneable with this method.
+\subsection{Usage}{
+\if{html}{\out{<div class="r">}}\preformatted{Filter$clone(deep = FALSE)}\if{html}{\out{</div>}}
+}
+
+\subsection{Arguments}{
+\if{html}{\out{<div class="arguments">}}
 \describe{
-
-\item{\code{$new()}}{
-
-  Constructor Filter object.
-
+\item{\code{deep}}{Whether to make a deep clone.}
 }
-\item{\code{$fromList(FilterList)}}{
-
-  Create Filter object from list.
-
-}
-
-\item{\code{$toList()}}{
-
-  Get list representation of Filter.
-
-}
-\item{\code{fromJSONString(FilterJson)}}{
-
-  Create Filter object from JSON.
-
-}
-\item{\code{toJSONString(pretty=TRUE)}}{
-
-  Get JSON representation of Filter.
-
+\if{html}{\out{</div>}}
 }
 }
 }
-
-\keyword{datasets}
